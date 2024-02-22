@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "soldes",
+  "info": {
+    "singularName": "solde",
+    "pluralName": "soldes",
+    "displayName": "solde"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "uid",
+      "required": true
+    },
+    "mode": {
+      "type": "enumeration",
+      "enum": [
+        "transfer",
+        "add"
+      ],
+      "default": "add"
+    },
+    "montant": {
+      "type": "integer",
+      "min": 10,
+      "max": 3000,
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "rejected",
+        "pending",
+        "done"
+      ],
+      "default": "pending",
+      "required": true
+    }
+  }
+}

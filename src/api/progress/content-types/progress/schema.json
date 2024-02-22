@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "progresses",
+  "info": {
+    "singularName": "progress",
+    "pluralName": "progresses",
+    "displayName": "progress",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "child": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::children.children"
+    },
+    "subject": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::subjects-data.subjects-data"
+    },
+    "progress": {
+      "type": "integer",
+      "max": 100,
+      "required": true,
+      "min": 0,
+      "default": 0
+    }
+  }
+}

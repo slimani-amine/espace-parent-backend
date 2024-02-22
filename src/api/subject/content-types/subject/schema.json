@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subjects",
+  "info": {
+    "singularName": "subject",
+    "pluralName": "subjects",
+    "displayName": "classe_subjects",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "classe": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::classe.classe"
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subjects-data.subjects-data"
+    },
+    "exams": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exam.exam"
+    },
+    "homework": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::homework.homework"
+    },
+    "lives": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::live.live",
+      "mappedBy": "classe_subject"
+    },
+    "classeName": {
+      "type": "string",
+      "required": false
+    },
+    "children": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::children.children",
+      "mappedBy": "classe"
+    }
+  }
+}

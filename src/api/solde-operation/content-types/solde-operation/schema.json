@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "solde_operations",
+  "info": {
+    "singularName": "solde-operation",
+    "pluralName": "solde-operations",
+    "displayName": "solde-operation"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "uid",
+      "required": true
+    },
+    "mode": {
+      "type": "enumeration",
+      "enum": [
+        "add",
+        "transfert"
+      ],
+      "required": true
+    },
+    "montant": {
+      "type": "integer",
+      "max": 3000,
+      "min": 10,
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "rejected",
+        "pending",
+        "success"
+      ],
+      "default": "pending",
+      "required": false
+    }
+  }
+}

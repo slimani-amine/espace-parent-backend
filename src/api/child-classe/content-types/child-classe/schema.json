@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "child_classes",
+  "info": {
+    "singularName": "child-classe",
+    "pluralName": "child-classes",
+    "displayName": "child_classe",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "child": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::children.children"
+    },
+    "classe": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::classe.classe"
+    }
+  }
+}

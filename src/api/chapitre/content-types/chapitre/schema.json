@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "chapitres",
+  "info": {
+    "singularName": "chapitre",
+    "pluralName": "chapitres",
+    "displayName": "chapitre"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "prof": {
+      "type": "string"
+    },
+    "vidreoNumbers": {
+      "type": "integer"
+    },
+    "progress": {
+      "type": "integer",
+      "max": 100,
+      "min": 0,
+      "default": 0,
+      "required": true
+    },
+    "subjects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::subjects-data.subjects-data",
+      "inversedBy": "chapitres"
+    }
+  }
+}
